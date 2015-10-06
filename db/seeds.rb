@@ -13,14 +13,14 @@ doc.css(".column").each do |column|
   words.each do |word|
     if category == "Nouns"
       Noun.create(word: word)
-    # elsif category == "Verbs"
-    #   word = Verb.save
-    # elsif category == "Adjectives"
-    #   word = Adjective.save
-    # elsif category == "Prepositions"
-    #   word = Preposition.save
-    # else
-    #   word = Other.save
+    elsif category == "Verbs"
+      Verb.create(word: word)
+    elsif category == "Adjectives"
+      Adjective.create(word: word)
+    elsif category == "Prepositions"
+      Preposition.create(word: word)
+    else
+      Other.create(word: word)
     end
   end
 end
