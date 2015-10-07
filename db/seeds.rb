@@ -24,3 +24,11 @@ doc.css(".column").each do |column|
     end
   end
 end
+
+@doc = Nokogiri::HTML(open('http://genius.com/Jaden-smith-best-tweets-annotated/'))
+@doc.css(".lyrics a").each do |link|
+  temp_array = link.content.split
+  temp_array.shift(2)
+  tweet = temp_array.join(" ")
+  Tweet.create(tweet: tweet)
+end

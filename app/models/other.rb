@@ -1,3 +1,3 @@
-class Other < ActiveRecord::Base
+class Other < Adjective
   validates :word, presence: true
 end

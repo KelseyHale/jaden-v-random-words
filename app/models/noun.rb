@@ -1,3 +1,3 @@
-class Noun < ActiveRecord::Base
+class Noun < Adjective
   validates :word, presence: true
 end
