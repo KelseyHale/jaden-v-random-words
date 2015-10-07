@@ -1,3 +1,3 @@
-class Verb < ActiveRecord::Base
+class Verb < Adjective
   validates :word, presence: true
 end
