@@ -1,9 +1,13 @@
 
 
 <p>
-  <%= @sentences.sample %>
+  <%= @sentence1 %>
 </br>
-  <%= @sentences.sample %>
+  <% if @sentence1 != @sentence2 %>
+    <%= @sentence2 %>
+  <% end %>
 </br>
-  <%= @sentences.sample %>
+  <% if @sentence3 != @sentence2 && @sentence3 != @sentence1 %>
+    <%= @sentence3 %>
+  <% end %>
 </p>
