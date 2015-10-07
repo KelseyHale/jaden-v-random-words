@@ -1,4 +1,18 @@
+
+
 <p>
-  Modify me in `app/views/homes/index.html.erb` or change the root directive in
-  `config/routes.rb`
+  <%= @sentence1 %>
+</br>
+  <% if @sentence1 != @sentence2 %>
+    <%= @sentence2 %>
+  <% end %>
+</br>
+  <% if @sentence3 != @sentence2 && @sentence3 != @sentence1 %>
+    <%= @sentence3 %>
+  <% end %>
+</p>
+</br>
+
+<p>
+  
 </p>
