@@ -16,3 +16,8 @@
 //= require materialize-sprockets
 
 $(function(){ $(document).foundation(); });
+
+// if correct flash one thing
+// elsif incorrect flash a different thing
+//
+var toast = function(){ Materialize.toast('Correct! Play again', 4000) }

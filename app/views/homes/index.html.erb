@@ -7,8 +7,8 @@
         <p><%= render ["randomwords", "tweet"].sample %></p>
       </div>
       <div class="card-action center-align">
-        <a class="btn-flat blue-grey darken-3" href="#">Random Words</a>
-        <a class="btn-flat blue-grey darken-3" href="#">Jaden Tweet</a>
+        <a><%= link_to "Random Words", root_path, class:"btn-flat blue-grey darken-3" %></a>
+        <a><%= link_to "Jaden Tweet", root_path, class:"btn-flat blue-grey darken-3", onclick:"toast();" %></a>
       </div>
     </div>
   </div>
