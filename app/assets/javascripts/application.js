@@ -15,9 +15,18 @@
 //= require_tree .
 //= require materialize-sprockets
 
-$(function(){ $(document).foundation(); });
-
 // if correct flash one thing
 // elsif incorrect flash a different thing
 //
 var toast = function(){ Materialize.toast('Correct! Play again', 4000) }
+var correct = function(){ Materialize.toast('Correct! Play again', 4000) }
+var wrong = function(){ Materialize.toast('Wrong! Play again', 4000) }
+
+var rightorwrong = function(button){
+  var content = document.getElementById('content');
+  if (button.id === content.className) {
+    correct();
+  } else {
+    wrong();
+  };
+};
