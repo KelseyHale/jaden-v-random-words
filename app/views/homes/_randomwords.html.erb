@@ -1,0 +1,9 @@
+<p id="content", class="randomwords">
+  <%= @sentence1 %>
+  <% if @sentence1 != @sentence2 %>
+    <%= @sentence2 %>
+  <% end %>
+  <% if @sentence3 != @sentence2 && @sentence3 != @sentence1 %>
+    <%= @sentence3 %>
+  <% end %>
+</p>

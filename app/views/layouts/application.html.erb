@@ -6,24 +6,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
-  <nav class="top-bar">
-    <ul class="title-area">
+<main>
+
+  <nav class="nav-wrapper cyan darken-2">
+    <ul id="nav-mobile">
       <li class="name">
-        <h1><a href="/">JadenVRandomWords</a></h1>
+        <a class="brand-logo center" href="/">Jaden vs Random Words</a>
       </li>
     </ul>
-
-    <section class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
   </nav>
 
   <%- flash.each do |key, value| -%>
@@ -36,5 +26,29 @@
 
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
+</main>
+<footer class="page-footer cyan darken-2">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">Created by: Kelsey Hale</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/KelseyHale/jaden-v-random-words">JadenVRandomWords on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2014 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
 </body>
+
 </html>

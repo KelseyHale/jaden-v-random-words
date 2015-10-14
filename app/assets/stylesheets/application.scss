@@ -12,6 +12,31 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
+ @import "materialize/components/color";
+ $primary-color: color("blue", "lighten-2") !default;
+ @import 'materialize';
+
+
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+ div.card-content {
+   padding: 5px;
+ }
+
+ .card-content p {
+   padding-top: 20px;
+ }
+
+.main-content {
+  padding-top: 75px;
+}
